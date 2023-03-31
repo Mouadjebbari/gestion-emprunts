@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/972f63b1c4.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <link rel="stylesheet" href="bibliothecair.css">
+        <link rel="stylesheet" href="biblio.css">
         <title>Document</title>
     </head>
     <body>
@@ -35,6 +35,8 @@
                 
                 // Afficher le formulaire de recherche
                 echo '
+                <br><br>
+                <center>
                     <form action="#" method="POST">
                         <div class="wrap">
                             <div class="search">
@@ -45,16 +47,10 @@
                             </div>
                         </div>
                     </form>
+                    <br>
+                    </center>
                 ';
                 
-                /* session_start();       
-                if (isset($_SESSION['id_adherent'])) {
-                        $id_adherent = $_SESSION['id_adherent'];
-                        $conn = mysqli_connect('localhost', 'root', '', 'gestion_emprunts');
-                        if ($conn->connect_error) {
-                            die("Connection failed: " . $conn->connect_error);
-                        } */
-
                         // Vérifier s'il y a des données à afficher
                         if (mysqli_num_rows($result) > 0) {
                         // Parcourir les données et afficher les cartes
@@ -70,20 +66,13 @@
                                         <p><strong>Date d'achat:</strong> " . $row['date_achat'] . "</p>
                                         <p><strong>Nombre de pages:</strong> " . $row['nombre_pages'] . "</p>
                                         <form action='reservation.php' method='post'>
-                                        <input type='hidden' name='id_adherent' value='".$_SESSION['id_adherent']."'>
-                                        <input type='hidden' name='id_ouvrage' value='".$row['id_ouvrage']."'>
-                                        <button class='card-link btn btn-outline-success fw-bold' name='book' type='submit'>Emprunter</button>
-                                          </form>
+                                            <input type='hidden' name='id_adherent' value='".$_SESSION['id_adherent']."'>
+                                            <input type='hidden' name='id_ouvrage' value='".$row['id_ouvrage']."'>
+                                            <button class='card-link btn btn-outline-success fw-bold' name='book' type='submit'>Emprunter</button>
+                                        </form>
                                     </div>
                                 </div>";
 
-                                /*                     if (isset($_POST['book'])) {
-                                    $id = $_POST['id_annonce'];
-                                    $sql = "DELETE FROM annonce WHERE id_annonce=$id";
-                                    $result = $conn->query($sql);
-                                }
-                                    $conn->close();
-                                */
                         }
                     } else {
                         echo "No results found.";
@@ -94,15 +83,14 @@
         ?>
                 </div>
                 </main>
-         <!-- footer area start-->
-        <footer>
+        
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+    <footer>
             <div class="footer-area">
                 <p>© Copyright <?php echo date('Y') ?>. All right reserved.</p>
             </div>
         </footer>
         <!-- footer area end-->
-    </div>
-   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    </body>
     </html>

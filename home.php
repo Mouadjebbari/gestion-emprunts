@@ -1,5 +1,5 @@
 <?php
-    require "headerr.php";
+    require "header.php";
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $userType = $_POST['user_type'];
         if ($userType === 'member') {

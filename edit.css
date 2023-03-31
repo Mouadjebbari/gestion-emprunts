@@ -1,0 +1,83 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-image: linear-gradient(to right, #d75069, #ab4b77, #7a4974, #4f4260, #343642);
+  }
+.control-group input[type="text"],
+.control-group input[type="password"],
+.control-group select {
+  /* Set font size and line height */
+  font-size: 16px;
+  line-height: 1.5;
+  /* Set border and background color */
+  border-radius: 5px;
+  border: 1px solid #d75069;
+  background-color: #fff;
+  /* Set padding and margin */
+  padding: 8px;
+  margin: 8px 0;
+  /* Set width to 100% */
+  width: 100%;
+  /* Set box-sizing to border-box */
+  box-sizing: border-box;
+  /* Add hover and focus styles */
+  transition: border-color 0.2s ease-in-out;
+}
+
+.control-group input[type="text"]:hover,
+.control-group input[type="password"]:hover,
+.control-group select:hover {
+  border-color: #d75069;
+}
+
+.control-group input[type="text"]:focus,
+.control-group input[type="password"]:focus,
+.control-group select:focus {
+  border-color: #d75069;
+  outline: none;
+}
+.card {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    margin-top: 0;
+  }
+  .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .btn:hover {
+    background-color: #2f7131;
+    color: #fff;
+    cursor: pointer;
+  }
+  .control-label {
+   font-family: 'Times New Roman', Times, serif;
+  }

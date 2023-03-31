@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="signUp.css">
+    <link rel="stylesheet" href="signup.css">
     <title>Document</title>
 </head>
 <body>
@@ -94,7 +94,7 @@ if (isset($_POST['submit'])) {
     $sql = "INSERT INTO adherent (nom, prenom, nickname, adresse, cin, date_naissance, email, telephone, type, date_incription, mot_de_passe) 
             VALUES ('$nom', '$prenom', '$nickname', '$adresse', '$cin', '$date_naissance', '$email', '$telephone', '$type', NOW(), '$mot_de_passe')";
     if ($conn->query($sql) === TRUE) {
-		header("Location: signin.php");
+		header("Location: signinaderent.php");
 		} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 		}

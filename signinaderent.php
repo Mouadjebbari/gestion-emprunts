@@ -34,12 +34,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="signin.css">
-        <title>Document</title>
+        <link rel="stylesheet" href="signIn.css">
+        <title>Sign In Adherent</title>
     </head>
     <body>
         <div class="conter">
-            <h1>Login Adherent</h1>
+            <h1>Sign In Adherent</h1>
             <form action="#" method="post">
                 <div class="txt_field">
                     <input type="text" required name="nickname">
